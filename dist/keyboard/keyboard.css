@@ -1,0 +1,95 @@
+:root {
+  --keyboard-bg: #004134;
+}
+
+.keyboard {
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  background: red;
+  padding: 0.5rem;
+  background: var(--keyboard-bg);
+  -webkit-box-shadow: 0 0 2rem rgba(0, 0, 0, 0.5);
+  box-shadow: 0 0 2rem rgba(0, 0, 0, 0.5);
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-transition: bottom 400ms ease;
+  -o-transition: bottom 400ms ease;
+  transition: bottom 400ms ease;
+}
+
+.keyboard--hidden {
+  bottom: -100%;
+}
+
+.keyboard__keys {
+  text-align: center;
+}
+
+.keyboard__key {
+  position: relative;
+  width: 6%;
+  height: 3.5rem;
+  max-width: 9rem;
+  margin: 0.3rem;
+  border: none;
+  border-radius: 0.4rem;
+  background: rgba(255, 255, 255, 0.2);
+  color: white;
+  outline: none;
+  font-size: 1.3rem;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  vertical-align: top;
+  padding: 0;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.keyboard__key:active {
+  background: rgba(255, 255, 255, 0.12);
+}
+
+.keyboard__key--wide {
+  width: 12%;
+}
+
+.keyboard__key--extra-wide {
+  width: 36%;
+  max-width: 50rem;
+}
+
+.keyboard__key--activatable::after {
+  content: "";
+  width: 0.8rem;
+  height: 0.8rem;
+  border-radius: 50%;
+  position: absolute;
+  top: 10%;
+  right: 10%;
+  background: rgba(0, 0, 0, 0.4);
+}
+.keyboard__key--active::after {
+  background: #08ff00;
+}
+
+.keyboard__key--dark {
+  background: rgba(0, 0, 0, 0.25);
+}
+
+@media screen and (min-width: 768px) {
+  .keyboard__key {
+    font-size: 1.7rem;
+    height: 4.5rem;
+  }
+}

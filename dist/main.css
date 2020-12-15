@@ -1,0 +1,34 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.6rem;
+  font-family: monospace;
+}
+
+.text-container {
+  max-width: 55rem;
+  margin: 5rem auto 0 auto;
+  text-align: center;
+  padding: 2rem;
+}
+
+h1 {
+  font-size: 4rem;
+  letter-spacing: 0.3rem;
+  margin-bottom: 3rem;
+}
+
+textarea {
+  width: 100%;
+  height: 10rem;
+  padding: 1rem;
+}
